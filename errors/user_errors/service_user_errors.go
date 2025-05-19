@@ -15,7 +15,8 @@ var (
 	ErrFailedFindActive  = response.NewErrorResponse("Failed to fetch active users", http.StatusInternalServerError)
 	ErrFailedFindTrashed = response.NewErrorResponse("Failed to fetch trashed users", http.StatusInternalServerError)
 
-	ErrInternalServerError = response.NewErrorResponse("Internal server error", http.StatusInternalServerError)
+	ErrFailedPasswordNoMatch = response.NewErrorResponse("Failed password not match", http.StatusBadRequest)
+	ErrInternalServerError   = response.NewErrorResponse("Internal server error", http.StatusInternalServerError)
 
 	ErrFailedSendEmail = response.NewErrorResponse("Failed to send email", http.StatusInternalServerError)
 
