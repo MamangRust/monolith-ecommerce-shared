@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 
-	db "github.com/MamangRust/monolith-ecommerce-grpc-pkg/database/schema"
+	db "github.com/MamangRust/monolith-ecommerce-pkg/database/schema"
 
 	"github.com/MamangRust/monolith-ecommerce-shared/domain/record"
 )

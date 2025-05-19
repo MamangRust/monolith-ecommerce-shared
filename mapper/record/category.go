@@ -1,7 +1,7 @@
 package recordmapper
 
 import (
-	db "github.com/MamangRust/monolith-ecommerce-grpc-pkg/database/schema"
+	db "github.com/MamangRust/monolith-ecommerce-pkg/database/schema"
 
 	"github.com/MamangRust/monolith-ecommerce-shared/domain/record"
 )
