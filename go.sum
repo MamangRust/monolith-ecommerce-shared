@@ -1,5 +1,5 @@
-github.com/MamangRust/monolith-ecommerce-pkg v1.0.0 h1:T173ULQBmlQd+6GT/dIXsPg3No+cnIcjzTnCiABGJ18=
-github.com/MamangRust/monolith-ecommerce-pkg v1.0.0/go.mod h1:yA4VqemHVs9//mPrJuXo0H8PKwSo4L+3CzqKttKm2WU=
+github.com/MamangRust/monolith-ecommerce-pkg v1.0.2 h1:R3lDPxeLcJmPEs4Mf0zQmvPdWDYNca8E1uP/UlAuczc=
+github.com/MamangRust/monolith-ecommerce-pkg v1.0.2/go.mod h1:X8mGkttx9AemOv9QxV1K2vuSdOfQFGG9qzJQX5+oGFo=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gabriel-vasile/mimetype v1.4.8 h1:FfZ3gj38NjllZIeJAmMhr+qKL8Wu+nOoI3GqacKw1NM=
