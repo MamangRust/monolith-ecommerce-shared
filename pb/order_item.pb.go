@@ -740,12 +740,11 @@ const file_order_item_proto_rawDesc = "" +
 	"\x04data\x18\x03 \x03(\v2\x15.pb.OrderItemResponseR\x04data\x122\n" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x12.pb.PaginationMetaR\n" +
-	"pagination2\xe2\x02\n" +
+	"pagination2\x91\x02\n" +
 	"\x10OrderItemService\x12J\n" +
 	"\aFindAll\x12\x1b.pb.FindAllOrderItemRequest\x1a\".pb.ApiResponsePaginationOrderItem\x12W\n" +
 	"\fFindByActive\x12\x1b.pb.FindAllOrderItemRequest\x1a*.pb.ApiResponsePaginationOrderItemDeleteAt\x12X\n" +
-	"\rFindByTrashed\x12\x1b.pb.FindAllOrderItemRequest\x1a*.pb.ApiResponsePaginationOrderItemDeleteAt\x12O\n" +
-	"\x14FindOrderItemByOrder\x12\x1c.pb.FindByIdOrderItemRequest\x1a\x19.pb.ApiResponsesOrderItemB9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\rFindByTrashed\x12\x1b.pb.FindAllOrderItemRequest\x1a*.pb.ApiResponsePaginationOrderItemDeleteAtB4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_order_item_proto_rawDescOnce sync.Once
@@ -785,13 +784,11 @@ var file_order_item_proto_depIdxs = []int32{
 	0,  // 7: pb.OrderItemService.FindAll:input_type -> pb.FindAllOrderItemRequest
 	0,  // 8: pb.OrderItemService.FindByActive:input_type -> pb.FindAllOrderItemRequest
 	0,  // 9: pb.OrderItemService.FindByTrashed:input_type -> pb.FindAllOrderItemRequest
-	1,  // 10: pb.OrderItemService.FindOrderItemByOrder:input_type -> pb.FindByIdOrderItemRequest
-	9,  // 11: pb.OrderItemService.FindAll:output_type -> pb.ApiResponsePaginationOrderItem
-	8,  // 12: pb.OrderItemService.FindByActive:output_type -> pb.ApiResponsePaginationOrderItemDeleteAt
-	8,  // 13: pb.OrderItemService.FindByTrashed:output_type -> pb.ApiResponsePaginationOrderItemDeleteAt
-	5,  // 14: pb.OrderItemService.FindOrderItemByOrder:output_type -> pb.ApiResponsesOrderItem
-	11, // [11:15] is the sub-list for method output_type
-	7,  // [7:11] is the sub-list for method input_type
+	9,  // 10: pb.OrderItemService.FindAll:output_type -> pb.ApiResponsePaginationOrderItem
+	8,  // 11: pb.OrderItemService.FindByActive:output_type -> pb.ApiResponsePaginationOrderItemDeleteAt
+	8,  // 12: pb.OrderItemService.FindByTrashed:output_type -> pb.ApiResponsePaginationOrderItemDeleteAt
+	10, // [10:13] is the sub-list for method output_type
+	7,  // [7:10] is the sub-list for method input_type
 	7,  // [7:7] is the sub-list for extension type_name
 	7,  // [7:7] is the sub-list for extension extendee
 	0,  // [0:7] is the sub-list for field type_name

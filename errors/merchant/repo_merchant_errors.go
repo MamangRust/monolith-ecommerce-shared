@@ -14,4 +14,5 @@ var (
 	ErrDeleteMerchantPermanent    = errors.New("failed to permanently delete merchant")
 	ErrRestoreAllMerchant         = errors.New("failed to restore all merchants")
 	ErrDeleteAllMerchantPermanent = errors.New("failed to permanently delete all merchants")
+	ErrUpdateMerchantStatusFailed = errors.New("failed to update merchant status")
 )

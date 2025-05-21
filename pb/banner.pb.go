@@ -1051,7 +1051,7 @@ const file_banner_proto_rawDesc = "" +
 	"\rRestoreBanner\x12\x19.pb.FindByIdBannerRequest\x1a\x1d.pb.ApiResponseBannerDeleteAt\x12O\n" +
 	"\x15DeleteBannerPermanent\x12\x19.pb.FindByIdBannerRequest\x1a\x1b.pb.ApiResponseBannerDelete\x12F\n" +
 	"\x10RestoreAllBanner\x12\x16.google.protobuf.Empty\x1a\x18.pb.ApiResponseBannerAll\"\x00\x12N\n" +
-	"\x18DeleteAllBannerPermanent\x12\x16.google.protobuf.Empty\x1a\x18.pb.ApiResponseBannerAll\"\x00B9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\x18DeleteAllBannerPermanent\x12\x16.google.protobuf.Empty\x1a\x18.pb.ApiResponseBannerAll\"\x00B4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_banner_proto_rawDescOnce sync.Once

@@ -886,7 +886,7 @@ const file_merchant_business_proto_rawDesc = "" +
 	"\x17RestoreMerchantBusiness\x12#.pb.FindByIdMerchantBusinessRequest\x1a'.pb.ApiResponseMerchantBusinessDeleteAt\x12e\n" +
 	"\x1fDeleteMerchantBusinessPermanent\x12#.pb.FindByIdMerchantBusinessRequest\x1a\x1d.pb.ApiResponseMerchantDelete\x12R\n" +
 	"\x1aRestoreAllMerchantBusiness\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00\x12Z\n" +
-	"\"DeleteAllMerchantBusinessPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00B9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\"DeleteAllMerchantBusinessPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00B4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_merchant_business_proto_rawDescOnce sync.Once

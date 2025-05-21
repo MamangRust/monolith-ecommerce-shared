@@ -990,7 +990,7 @@ const file_merchant_award_proto_rawDesc = "" +
 	"\x14RestoreMerchantAward\x12 .pb.FindByIdMerchantAwardRequest\x1a$.pb.ApiResponseMerchantAwardDeleteAt\x12_\n" +
 	"\x1cDeleteMerchantAwardPermanent\x12 .pb.FindByIdMerchantAwardRequest\x1a\x1d.pb.ApiResponseMerchantDelete\x12O\n" +
 	"\x17RestoreAllMerchantAward\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00\x12W\n" +
-	"\x1fDeleteAllMerchantAwardPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00B9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\x1fDeleteAllMerchantAwardPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00B4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_merchant_award_proto_rawDescOnce sync.Once

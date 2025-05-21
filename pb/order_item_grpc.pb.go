@@ -19,10 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	OrderItemService_FindAll_FullMethodName              = "/pb.OrderItemService/FindAll"
-	OrderItemService_FindByActive_FullMethodName         = "/pb.OrderItemService/FindByActive"
-	OrderItemService_FindByTrashed_FullMethodName        = "/pb.OrderItemService/FindByTrashed"
-	OrderItemService_FindOrderItemByOrder_FullMethodName = "/pb.OrderItemService/FindOrderItemByOrder"
+	OrderItemService_FindAll_FullMethodName       = "/pb.OrderItemService/FindAll"
+	OrderItemService_FindByActive_FullMethodName  = "/pb.OrderItemService/FindByActive"
+	OrderItemService_FindByTrashed_FullMethodName = "/pb.OrderItemService/FindByTrashed"
 )
 
 // OrderItemServiceClient is the client API for OrderItemService service.
@@ -32,7 +31,6 @@ type OrderItemServiceClient interface {
 	FindAll(ctx context.Context, in *FindAllOrderItemRequest, opts ...grpc.CallOption) (*ApiResponsePaginationOrderItem, error)
 	FindByActive(ctx context.Context, in *FindAllOrderItemRequest, opts ...grpc.CallOption) (*ApiResponsePaginationOrderItemDeleteAt, error)
 	FindByTrashed(ctx context.Context, in *FindAllOrderItemRequest, opts ...grpc.CallOption) (*ApiResponsePaginationOrderItemDeleteAt, error)
-	FindOrderItemByOrder(ctx context.Context, in *FindByIdOrderItemRequest, opts ...grpc.CallOption) (*ApiResponsesOrderItem, error)
 }
 
 type orderItemServiceClient struct {
@@ -73,16 +71,6 @@ func (c *orderItemServiceClient) FindByTrashed(ctx context.Context, in *FindAllO
 	return out, nil
 }
 
-func (c *orderItemServiceClient) FindOrderItemByOrder(ctx context.Context, in *FindByIdOrderItemRequest, opts ...grpc.CallOption) (*ApiResponsesOrderItem, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponsesOrderItem)
-	err := c.cc.Invoke(ctx, OrderItemService_FindOrderItemByOrder_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // OrderItemServiceServer is the server API for OrderItemService service.
 // All implementations must embed UnimplementedOrderItemServiceServer
 // for forward compatibility.
@@ -90,7 +78,6 @@ type OrderItemServiceServer interface {
 	FindAll(context.Context, *FindAllOrderItemRequest) (*ApiResponsePaginationOrderItem, error)
 	FindByActive(context.Context, *FindAllOrderItemRequest) (*ApiResponsePaginationOrderItemDeleteAt, error)
 	FindByTrashed(context.Context, *FindAllOrderItemRequest) (*ApiResponsePaginationOrderItemDeleteAt, error)
-	FindOrderItemByOrder(context.Context, *FindByIdOrderItemRequest) (*ApiResponsesOrderItem, error)
 	mustEmbedUnimplementedOrderItemServiceServer()
 }
 
@@ -109,9 +96,6 @@ func (UnimplementedOrderItemServiceServer) FindByActive(context.Context, *FindAl
 }
 func (UnimplementedOrderItemServiceServer) FindByTrashed(context.Context, *FindAllOrderItemRequest) (*ApiResponsePaginationOrderItemDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FindByTrashed not implemented")
-}
-func (UnimplementedOrderItemServiceServer) FindOrderItemByOrder(context.Context, *FindByIdOrderItemRequest) (*ApiResponsesOrderItem, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FindOrderItemByOrder not implemented")
 }
 func (UnimplementedOrderItemServiceServer) mustEmbedUnimplementedOrderItemServiceServer() {}
 func (UnimplementedOrderItemServiceServer) testEmbeddedByValue()                          {}
@@ -188,24 +172,6 @@ func _OrderItemService_FindByTrashed_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _OrderItemService_FindOrderItemByOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FindByIdOrderItemRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(OrderItemServiceServer).FindOrderItemByOrder(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: OrderItemService_FindOrderItemByOrder_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(OrderItemServiceServer).FindOrderItemByOrder(ctx, req.(*FindByIdOrderItemRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // OrderItemService_ServiceDesc is the grpc.ServiceDesc for OrderItemService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -224,10 +190,6 @@ var OrderItemService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "FindByTrashed",
 			Handler:    _OrderItemService_FindByTrashed_Handler,
-		},
-		{
-			MethodName: "FindOrderItemByOrder",
-			Handler:    _OrderItemService_FindOrderItemByOrder_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

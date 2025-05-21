@@ -782,7 +782,7 @@ const file_cart_proto_rawDesc = "" +
 	"\aFindAll\x12\x16.pb.FindAllCartRequest\x1a\x1d.pb.ApiResponsePaginationCart\x124\n" +
 	"\x06Create\x12\x15.pb.CreateCartRequest\x1a\x13.pb.ApiResponseCart\x12<\n" +
 	"\x06Delete\x12\x17.pb.FindByIdCartRequest\x1a\x19.pb.ApiResponseCartDelete\x12:\n" +
-	"\tDeleteAll\x12\x15.pb.DeleteCartRequest\x1a\x16.pb.ApiResponseCartAllB9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\tDeleteAll\x12\x15.pb.DeleteCartRequest\x1a\x16.pb.ApiResponseCartAllB4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_cart_proto_rawDescOnce sync.Once

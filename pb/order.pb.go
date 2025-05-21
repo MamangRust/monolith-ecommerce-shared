@@ -2209,12 +2209,10 @@ const file_order_proto_rawDesc = "" +
 	"\"ApiResponseOrderYearlyTotalRevenue\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x127\n" +
-	"\x04data\x18\x03 \x03(\v2#.pb.OrderYearlyTotalRevenueResponseR\x04data2\xd4\r\n" +
+	"\x04data\x18\x03 \x03(\v2#.pb.OrderYearlyTotalRevenueResponseR\x04data2\x81\f\n" +
 	"\fOrderService\x12c\n" +
 	"\x17FindMonthlyTotalRevenue\x12\x1d.pb.FindYearMonthTotalRevenue\x1a'.pb.ApiResponseOrderMonthlyTotalRevenue\"\x00\x12\\\n" +
-	"\x16FindYearlyTotalRevenue\x12\x18.pb.FindYearTotalRevenue\x1a&.pb.ApiResponseOrderYearlyTotalRevenue\"\x00\x12k\n" +
-	"\x1bFindMonthlyTotalRevenueById\x12!.pb.FindYearMonthTotalRevenueById\x1a'.pb.ApiResponseOrderMonthlyTotalRevenue\"\x00\x12d\n" +
-	"\x1aFindYearlyTotalRevenueById\x12\x1c.pb.FindYearTotalRevenueById\x1a&.pb.ApiResponseOrderYearlyTotalRevenue\"\x00\x12w\n" +
+	"\x16FindYearlyTotalRevenue\x12\x18.pb.FindYearTotalRevenue\x1a&.pb.ApiResponseOrderYearlyTotalRevenue\"\x00\x12w\n" +
 	"!FindMonthlyTotalRevenueByMerchant\x12'.pb.FindYearMonthTotalRevenueByMerchant\x1a'.pb.ApiResponseOrderMonthlyTotalRevenue\"\x00\x12p\n" +
 	" FindYearlyTotalRevenueByMerchant\x12\".pb.FindYearTotalRevenueByMerchant\x1a&.pb.ApiResponseOrderYearlyTotalRevenue\"\x00\x12D\n" +
 	"\x12FindMonthlyRevenue\x12\x11.pb.FindYearOrder\x1a\x1b.pb.ApiResponseOrderMonthly\x12B\n" +
@@ -2231,7 +2229,7 @@ const file_order_proto_rawDesc = "" +
 	"\fRestoreOrder\x12\x18.pb.FindByIdOrderRequest\x1a\x1c.pb.ApiResponseOrderDeleteAt\x12L\n" +
 	"\x14DeleteOrderPermanent\x12\x18.pb.FindByIdOrderRequest\x1a\x1a.pb.ApiResponseOrderDelete\x12D\n" +
 	"\x0fRestoreAllOrder\x12\x16.google.protobuf.Empty\x1a\x17.pb.ApiResponseOrderAll\"\x00\x12L\n" +
-	"\x17DeleteAllOrderPermanent\x12\x16.google.protobuf.Empty\x1a\x17.pb.ApiResponseOrderAll\"\x00B9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\x17DeleteAllOrderPermanent\x12\x16.google.protobuf.Empty\x1a\x17.pb.ApiResponseOrderAll\"\x00B4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_order_proto_rawDescOnce sync.Once
@@ -2304,48 +2302,44 @@ var file_order_proto_depIdxs = []int32{
 	20, // 15: pb.ApiResponseOrderYearlyTotalRevenue.data:type_name -> pb.OrderYearlyTotalRevenueResponse
 	5,  // 16: pb.OrderService.FindMonthlyTotalRevenue:input_type -> pb.FindYearMonthTotalRevenue
 	6,  // 17: pb.OrderService.FindYearlyTotalRevenue:input_type -> pb.FindYearTotalRevenue
-	7,  // 18: pb.OrderService.FindMonthlyTotalRevenueById:input_type -> pb.FindYearMonthTotalRevenueById
-	8,  // 19: pb.OrderService.FindYearlyTotalRevenueById:input_type -> pb.FindYearTotalRevenueById
-	9,  // 20: pb.OrderService.FindMonthlyTotalRevenueByMerchant:input_type -> pb.FindYearMonthTotalRevenueByMerchant
-	10, // 21: pb.OrderService.FindYearlyTotalRevenueByMerchant:input_type -> pb.FindYearTotalRevenueByMerchant
-	3,  // 22: pb.OrderService.FindMonthlyRevenue:input_type -> pb.FindYearOrder
-	3,  // 23: pb.OrderService.FindYearlyRevenue:input_type -> pb.FindYearOrder
-	4,  // 24: pb.OrderService.FindMonthlyRevenueByMerchant:input_type -> pb.FindYearOrderByMerchant
-	4,  // 25: pb.OrderService.FindYearlyRevenueByMerchant:input_type -> pb.FindYearOrderByMerchant
-	0,  // 26: pb.OrderService.FindAll:input_type -> pb.FindAllOrderRequest
-	2,  // 27: pb.OrderService.FindById:input_type -> pb.FindByIdOrderRequest
-	0,  // 28: pb.OrderService.FindByActive:input_type -> pb.FindAllOrderRequest
-	0,  // 29: pb.OrderService.FindByTrashed:input_type -> pb.FindAllOrderRequest
-	11, // 30: pb.OrderService.Create:input_type -> pb.CreateOrderRequest
-	12, // 31: pb.OrderService.Update:input_type -> pb.UpdateOrderRequest
-	2,  // 32: pb.OrderService.TrashedOrder:input_type -> pb.FindByIdOrderRequest
-	2,  // 33: pb.OrderService.RestoreOrder:input_type -> pb.FindByIdOrderRequest
-	2,  // 34: pb.OrderService.DeleteOrderPermanent:input_type -> pb.FindByIdOrderRequest
-	36, // 35: pb.OrderService.RestoreAllOrder:input_type -> google.protobuf.Empty
-	36, // 36: pb.OrderService.DeleteAllOrderPermanent:input_type -> google.protobuf.Empty
-	30, // 37: pb.OrderService.FindMonthlyTotalRevenue:output_type -> pb.ApiResponseOrderMonthlyTotalRevenue
-	31, // 38: pb.OrderService.FindYearlyTotalRevenue:output_type -> pb.ApiResponseOrderYearlyTotalRevenue
-	30, // 39: pb.OrderService.FindMonthlyTotalRevenueById:output_type -> pb.ApiResponseOrderMonthlyTotalRevenue
-	31, // 40: pb.OrderService.FindYearlyTotalRevenueById:output_type -> pb.ApiResponseOrderYearlyTotalRevenue
-	30, // 41: pb.OrderService.FindMonthlyTotalRevenueByMerchant:output_type -> pb.ApiResponseOrderMonthlyTotalRevenue
-	31, // 42: pb.OrderService.FindYearlyTotalRevenueByMerchant:output_type -> pb.ApiResponseOrderYearlyTotalRevenue
-	21, // 43: pb.OrderService.FindMonthlyRevenue:output_type -> pb.ApiResponseOrderMonthly
-	22, // 44: pb.OrderService.FindYearlyRevenue:output_type -> pb.ApiResponseOrderYearly
-	21, // 45: pb.OrderService.FindMonthlyRevenueByMerchant:output_type -> pb.ApiResponseOrderMonthly
-	22, // 46: pb.OrderService.FindYearlyRevenueByMerchant:output_type -> pb.ApiResponseOrderYearly
-	29, // 47: pb.OrderService.FindAll:output_type -> pb.ApiResponsePaginationOrder
-	23, // 48: pb.OrderService.FindById:output_type -> pb.ApiResponseOrder
-	28, // 49: pb.OrderService.FindByActive:output_type -> pb.ApiResponsePaginationOrderDeleteAt
-	28, // 50: pb.OrderService.FindByTrashed:output_type -> pb.ApiResponsePaginationOrderDeleteAt
-	23, // 51: pb.OrderService.Create:output_type -> pb.ApiResponseOrder
-	23, // 52: pb.OrderService.Update:output_type -> pb.ApiResponseOrder
-	24, // 53: pb.OrderService.TrashedOrder:output_type -> pb.ApiResponseOrderDeleteAt
-	24, // 54: pb.OrderService.RestoreOrder:output_type -> pb.ApiResponseOrderDeleteAt
-	26, // 55: pb.OrderService.DeleteOrderPermanent:output_type -> pb.ApiResponseOrderDelete
-	27, // 56: pb.OrderService.RestoreAllOrder:output_type -> pb.ApiResponseOrderAll
-	27, // 57: pb.OrderService.DeleteAllOrderPermanent:output_type -> pb.ApiResponseOrderAll
-	37, // [37:58] is the sub-list for method output_type
-	16, // [16:37] is the sub-list for method input_type
+	9,  // 18: pb.OrderService.FindMonthlyTotalRevenueByMerchant:input_type -> pb.FindYearMonthTotalRevenueByMerchant
+	10, // 19: pb.OrderService.FindYearlyTotalRevenueByMerchant:input_type -> pb.FindYearTotalRevenueByMerchant
+	3,  // 20: pb.OrderService.FindMonthlyRevenue:input_type -> pb.FindYearOrder
+	3,  // 21: pb.OrderService.FindYearlyRevenue:input_type -> pb.FindYearOrder
+	4,  // 22: pb.OrderService.FindMonthlyRevenueByMerchant:input_type -> pb.FindYearOrderByMerchant
+	4,  // 23: pb.OrderService.FindYearlyRevenueByMerchant:input_type -> pb.FindYearOrderByMerchant
+	0,  // 24: pb.OrderService.FindAll:input_type -> pb.FindAllOrderRequest
+	2,  // 25: pb.OrderService.FindById:input_type -> pb.FindByIdOrderRequest
+	0,  // 26: pb.OrderService.FindByActive:input_type -> pb.FindAllOrderRequest
+	0,  // 27: pb.OrderService.FindByTrashed:input_type -> pb.FindAllOrderRequest
+	11, // 28: pb.OrderService.Create:input_type -> pb.CreateOrderRequest
+	12, // 29: pb.OrderService.Update:input_type -> pb.UpdateOrderRequest
+	2,  // 30: pb.OrderService.TrashedOrder:input_type -> pb.FindByIdOrderRequest
+	2,  // 31: pb.OrderService.RestoreOrder:input_type -> pb.FindByIdOrderRequest
+	2,  // 32: pb.OrderService.DeleteOrderPermanent:input_type -> pb.FindByIdOrderRequest
+	36, // 33: pb.OrderService.RestoreAllOrder:input_type -> google.protobuf.Empty
+	36, // 34: pb.OrderService.DeleteAllOrderPermanent:input_type -> google.protobuf.Empty
+	30, // 35: pb.OrderService.FindMonthlyTotalRevenue:output_type -> pb.ApiResponseOrderMonthlyTotalRevenue
+	31, // 36: pb.OrderService.FindYearlyTotalRevenue:output_type -> pb.ApiResponseOrderYearlyTotalRevenue
+	30, // 37: pb.OrderService.FindMonthlyTotalRevenueByMerchant:output_type -> pb.ApiResponseOrderMonthlyTotalRevenue
+	31, // 38: pb.OrderService.FindYearlyTotalRevenueByMerchant:output_type -> pb.ApiResponseOrderYearlyTotalRevenue
+	21, // 39: pb.OrderService.FindMonthlyRevenue:output_type -> pb.ApiResponseOrderMonthly
+	22, // 40: pb.OrderService.FindYearlyRevenue:output_type -> pb.ApiResponseOrderYearly
+	21, // 41: pb.OrderService.FindMonthlyRevenueByMerchant:output_type -> pb.ApiResponseOrderMonthly
+	22, // 42: pb.OrderService.FindYearlyRevenueByMerchant:output_type -> pb.ApiResponseOrderYearly
+	29, // 43: pb.OrderService.FindAll:output_type -> pb.ApiResponsePaginationOrder
+	23, // 44: pb.OrderService.FindById:output_type -> pb.ApiResponseOrder
+	28, // 45: pb.OrderService.FindByActive:output_type -> pb.ApiResponsePaginationOrderDeleteAt
+	28, // 46: pb.OrderService.FindByTrashed:output_type -> pb.ApiResponsePaginationOrderDeleteAt
+	23, // 47: pb.OrderService.Create:output_type -> pb.ApiResponseOrder
+	23, // 48: pb.OrderService.Update:output_type -> pb.ApiResponseOrder
+	24, // 49: pb.OrderService.TrashedOrder:output_type -> pb.ApiResponseOrderDeleteAt
+	24, // 50: pb.OrderService.RestoreOrder:output_type -> pb.ApiResponseOrderDeleteAt
+	26, // 51: pb.OrderService.DeleteOrderPermanent:output_type -> pb.ApiResponseOrderDelete
+	27, // 52: pb.OrderService.RestoreAllOrder:output_type -> pb.ApiResponseOrderAll
+	27, // 53: pb.OrderService.DeleteAllOrderPermanent:output_type -> pb.ApiResponseOrderAll
+	35, // [35:54] is the sub-list for method output_type
+	16, // [16:35] is the sub-list for method input_type
 	16, // [16:16] is the sub-list for extension type_name
 	16, // [16:16] is the sub-list for extension extendee
 	0,  // [0:16] is the sub-list for field type_name

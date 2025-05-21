@@ -1153,7 +1153,7 @@ const file_shipping_address_proto_rawDesc = "" +
 	"\x0fRestoreShipping\x12\x1b.pb.FindByIdShippingRequest\x1a\x1f.pb.ApiResponseShippingDeleteAt\x12U\n" +
 	"\x17DeleteShippingPermanent\x12\x1b.pb.FindByIdShippingRequest\x1a\x1d.pb.ApiResponseShippingDelete\x12H\n" +
 	"\x12RestoreAllShipping\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseShippingAll\x12P\n" +
-	"\x1aDeleteAllShippingPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseShippingAllB9Z7github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
+	"\x1aDeleteAllShippingPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseShippingAllB4Z2github.com/MamangRust/monolith-ecommerce-shared/pbb\x06proto3"
 
 var (
 	file_shipping_address_proto_rawDescOnce sync.Once
