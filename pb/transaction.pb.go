@@ -513,6 +513,7 @@ type CreateTransactionRequest struct {
 	MerchantId    int32                  `protobuf:"varint,2,opt,name=merchant_id,json=merchantId,proto3" json:"merchant_id,omitempty"`
 	PaymentMethod string                 `protobuf:"bytes,3,opt,name=payment_method,json=paymentMethod,proto3" json:"payment_method,omitempty"`
 	Amount        int32                  `protobuf:"varint,4,opt,name=amount,proto3" json:"amount,omitempty"`
+	UserId        int32                  `protobuf:"varint,5,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -571,6 +572,13 @@ func (x *CreateTransactionRequest) GetPaymentMethod() string {
 func (x *CreateTransactionRequest) GetAmount() int32 {
 	if x != nil {
 		return x.Amount
+	}
+	return 0
+}
+
+func (x *CreateTransactionRequest) GetUserId() int32 {
+	if x != nil {
+		return x.UserId
 	}
 	return 0
 }
@@ -2276,13 +2284,14 @@ const file_transaction_proto_rawDesc = "" +
 	"merchantId\x12\x12\n" +
 	"\x04year\x18\x02 \x01(\x05R\x04year\",\n" +
 	"\x1aFindByIdTransactionRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x05R\x02id\"\x95\x01\n" +
+	"\x02id\x18\x01 \x01(\x05R\x02id\"\xae\x01\n" +
 	"\x18CreateTransactionRequest\x12\x19\n" +
 	"\border_id\x18\x01 \x01(\x05R\aorderId\x12\x1f\n" +
 	"\vmerchant_id\x18\x02 \x01(\x05R\n" +
 	"merchantId\x12%\n" +
 	"\x0epayment_method\x18\x03 \x01(\tR\rpaymentMethod\x12\x16\n" +
-	"\x06amount\x18\x04 \x01(\x05R\x06amount\"\xbc\x01\n" +
+	"\x06amount\x18\x04 \x01(\x05R\x06amount\x12\x17\n" +
+	"\auser_id\x18\x05 \x01(\x05R\x06userId\"\xbc\x01\n" +
 	"\x18UpdateTransactionRequest\x12%\n" +
 	"\x0etransaction_id\x18\x01 \x01(\x05R\rtransactionId\x12\x19\n" +
 	"\border_id\x18\x02 \x01(\x05R\aorderId\x12\x1f\n" +

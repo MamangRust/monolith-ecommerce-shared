@@ -16,6 +16,10 @@ var (
 		return response.NewApiErrorResponse(c, "error", "invalid month", http.StatusBadRequest)
 	}
 
+	ErrApiTransactionInvalidUserId = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "invalid user ID", http.StatusBadRequest)
+	}
+
 	ErrApiTransactionInvalidMerchantId = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "invalid merchant ID", http.StatusBadRequest)
 	}
