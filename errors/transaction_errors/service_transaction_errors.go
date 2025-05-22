@@ -12,6 +12,8 @@ var (
 	ErrFailedPaymentInsufficientBalance    = response.NewErrorResponse("Insufficient balance", http.StatusBadRequest)
 	ErrFailedOrderItemEmpty                = response.NewErrorResponse("Failed to order item empty", http.StatusInternalServerError)
 
+	ErrFailedSendEmail = response.NewErrorResponse("Failed to send email", http.StatusInternalServerError)
+
 	ErrFailedFindMonthlyAmountSuccess = response.NewErrorResponse("Failed to find monthly amount success", http.StatusInternalServerError)
 	ErrFailedFindYearlyAmountSuccess  = response.NewErrorResponse("Failed to find yearly amount success", http.StatusInternalServerError)
 	ErrFailedFindMonthlyAmountFailed  = response.NewErrorResponse("Failed to find monthly amount failed", http.StatusInternalServerError)
