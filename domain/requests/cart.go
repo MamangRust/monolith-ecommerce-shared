@@ -25,8 +25,14 @@ type CreateCartRequest struct {
 	UserID    int `json:"user_id,omitempty"`
 }
 
-type DeleteCartRequest struct {
+type DeleteAllCartRequest struct {
+	UserID  int   `json:"user_id" validate:"required"`
 	CartIds []int `json:"cart_ids" validate:"required"`
+}
+
+type DeleteCartRequest struct {
+	CartID int `json:"cart_id" validate:"required"`
+	UserID int `json:"user_id" validate:"required"`
 }
 
 func (l *CartCreateRecord) Validate() error {
