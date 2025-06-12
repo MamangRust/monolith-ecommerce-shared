@@ -37,6 +37,10 @@ var (
 		return response.NewApiErrorResponse(c, "error", "failed to delete Cart", http.StatusInternalServerError)
 	}
 
+	ErrApiValidateDeleteCart = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "validation failed: invalid delete Cart request", http.StatusBadRequest)
+	}
+
 	ErrApiFailedDeleteAllCarts = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "failed to delete all Carts", http.StatusInternalServerError)
 	}

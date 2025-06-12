@@ -69,3 +69,15 @@ func (l *DeleteCartRequest) Validate() error {
 
 	return nil
 }
+
+func (l *DeleteAllCartRequest) Validate() error {
+	validate := validator.New()
+
+	err := validate.Struct(l)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
