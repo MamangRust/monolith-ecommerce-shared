@@ -9,6 +9,18 @@ import (
 )
 
 var (
+	ErrApiVerifyCode = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "failed to verify code", http.StatusBadRequest)
+	}
+
+	ErrApiForgotPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "failed to forgot password", http.StatusBadRequest)
+	}
+
+	ErrApiResetPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "failed to reset password", http.StatusBadRequest)
+	}
+
 	ErrApiLogin = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "login failed: invalid argument provided", http.StatusBadRequest)
 	}
@@ -31,6 +43,22 @@ var (
 
 	ErrValidateRefreshToken = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "validation failed: invalid refresh-token request", http.StatusBadRequest)
+	}
+
+	ErrValidateForgotPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "validation failed: invalid forgot-password request", http.StatusBadRequest)
+	}
+
+	ErrValidateResetPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "validation failed: invalid reset-password request", http.StatusBadRequest)
+	}
+
+	ErrBindForgotPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "binding failed: invalid forgot password request payload", http.StatusBadRequest)
+	}
+
+	ErrBindResetPassword = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "binding failed: invalid reset password request payload", http.StatusBadRequest)
 	}
 
 	ErrBindLogin = func(c echo.Context) error {
