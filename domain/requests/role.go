@@ -2,6 +2,12 @@ package requests
 
 import "github.com/go-playground/validator/v10"
 
+type RoleRequestPayload struct {
+	UserID        int    `json:"user_id"`
+	CorrelationID string `json:"correlation_id"`
+	ReplyTopic    string `json:"reply_topic"`
+}
+
 type FindAllRole struct {
 	Search   string `json:"search" validate:"required"`
 	Page     int    `json:"page" validate:"min=1"`
