@@ -49,15 +49,14 @@ type MerchantBusinessRecord struct {
 }
 
 type MerchantPoliciesRecord struct {
-	ID           int     `json:"id"`
-	MerchantID   int     `json:"merchant_id"`
-	PolicyType   string  `json:"policy_type"`
-	Title        string  `json:"title"`
-	Description  string  `json:"description"`
-	CreatedAt    string  `json:"created_at"`
-	UpdatedAt    string  `json:"updated_at"`
-	DeletedAt    *string `json:"deleted_at"`
-	MerchantName string  `json:"merchant_name"`
+	ID          int     `json:"id"`
+	MerchantID  int     `json:"merchant_id"`
+	PolicyType  string  `json:"policy_type"`
+	Title       string  `json:"title"`
+	Description string  `json:"description"`
+	CreatedAt   string  `json:"created_at"`
+	UpdatedAt   string  `json:"updated_at"`
+	DeletedAt   *string `json:"deleted_at"`
 }
 
 type MerchantAwardRecord struct {
@@ -72,5 +71,4 @@ type MerchantAwardRecord struct {
 	CreatedAt      string  `json:"created_at"`
 	UpdatedAt      string  `json:"updated_at"`
 	DeletedAt      *string `json:"deleted_at"`
-	MerchantName   string  `json:"merchant_name"`
 }

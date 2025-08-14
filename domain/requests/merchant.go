@@ -9,7 +9,7 @@ type FindAllMerchant struct {
 }
 
 type CreateMerchantRequest struct {
-	UserID       int    `json:"user_id" validate:"required"`
+	UserID       int    `json:"user_id"`
 	Name         string `json:"name" validate:"required"`
 	Description  string `json:"description" validate:"required"`
 	Address      string `json:"address" validate:"required"`
@@ -20,7 +20,7 @@ type CreateMerchantRequest struct {
 
 type UpdateMerchantRequest struct {
 	MerchantID   *int   `json:"merchant_id"`
-	UserID       int    `json:"user_id" validate:"required"`
+	UserID       int    `json:"user_id"`
 	Name         string `json:"name" validate:"required"`
 	Description  string `json:"description" validate:"required"`
 	Address      string `json:"address" validate:"required"`

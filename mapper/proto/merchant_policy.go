@@ -59,14 +59,13 @@ func (m *merchantPolicyProtoMapper) ToProtoResponsePaginationMerchantPolicy(pagi
 
 func (m *merchantPolicyProtoMapper) mapResponseMerchantPolicy(merchant *response.MerchantPoliciesResponse) *pb.MerchantPoliciesResponse {
 	return &pb.MerchantPoliciesResponse{
-		Id:           int32(merchant.ID),
-		MerchantId:   int32(merchant.MerchantID),
-		PolicyType:   merchant.PolicyType,
-		Title:        merchant.Title,
-		Description:  merchant.Description,
-		CreatedAt:    merchant.CreatedAt,
-		UpdatedAt:    merchant.UpdatedAt,
-		MerchantName: merchant.MerchantName,
+		Id:          int32(merchant.ID),
+		MerchantId:  int32(merchant.MerchantID),
+		PolicyType:  merchant.PolicyType,
+		Title:       merchant.Title,
+		Description: merchant.Description,
+		CreatedAt:   merchant.CreatedAt,
+		UpdatedAt:   merchant.UpdatedAt,
 	}
 }
 
@@ -87,15 +86,14 @@ func (m *merchantPolicyProtoMapper) mapResponseMerchantPolicyDeleteAt(merchant *
 	}
 
 	return &pb.MerchantPoliciesResponseDeleteAt{
-		Id:           int32(merchant.ID),
-		MerchantId:   int32(merchant.MerchantID),
-		PolicyType:   merchant.PolicyType,
-		Title:        merchant.Title,
-		Description:  merchant.Description,
-		CreatedAt:    merchant.CreatedAt,
-		UpdatedAt:    merchant.UpdatedAt,
-		MerchantName: merchant.MerchantName,
-		DeletedAt:    deletedAt,
+		Id:          int32(merchant.ID),
+		MerchantId:  int32(merchant.MerchantID),
+		PolicyType:  merchant.PolicyType,
+		Title:       merchant.Title,
+		Description: merchant.Description,
+		CreatedAt:   merchant.CreatedAt,
+		UpdatedAt:   merchant.UpdatedAt,
+		DeletedAt:   deletedAt,
 	}
 }
 

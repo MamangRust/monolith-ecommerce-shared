@@ -66,7 +66,6 @@ func (m *merchantBusinessProtoMapper) mapResponseMerchantBusiness(merchant *resp
 		EstablishedYear:   int32(merchant.EstablishedYear),
 		NumberOfEmployees: int32(merchant.NumberOfEmployees),
 		WebsiteUrl:        merchant.WebsiteUrl,
-		MerchantName:      *merchant.MerchantName,
 		CreatedAt:         merchant.CreatedAt,
 		UpdatedAt:         merchant.UpdatedAt,
 	}
@@ -96,7 +95,6 @@ func (m *merchantBusinessProtoMapper) mapResponseMerchantBusinessDeleteAt(mercha
 		EstablishedYear:   int32(merchant.EstablishedYear),
 		NumberOfEmployees: int32(merchant.NumberOfEmployees),
 		WebsiteUrl:        merchant.WebsiteUrl,
-		MerchantName:      merchant.MerchantName,
 		CreatedAt:         merchant.CreatedAt,
 		UpdatedAt:         merchant.UpdatedAt,
 		DeletedAt:         deletedAt,
