@@ -34,7 +34,6 @@ func (s *merchantBusinessResponseMapper) ToMerchantBusinessResponseRelation(merc
 		TaxID:             merchant.TaxID,
 		EstablishedYear:   merchant.EstablishedYear,
 		NumberOfEmployees: merchant.NumberOfEmployees,
-		MerchantName:      merchant.MerchantName,
 		WebsiteUrl:        merchant.WebsiteUrl,
 		CreatedAt:         merchant.CreatedAt,
 		UpdatedAt:         merchant.UpdatedAt,

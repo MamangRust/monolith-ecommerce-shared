@@ -42,7 +42,6 @@ type MerchantBusinessRecord struct {
 	EstablishedYear   int     `json:"established_year"`
 	NumberOfEmployees int     `json:"number_of_employees"`
 	WebsiteUrl        string  `json:"website_url"`
-	MerchantName      *string `json:"merchant_name"`
 	CreatedAt         string  `json:"created_at"`
 	UpdatedAt         string  `json:"updated_at"`
 	DeletedAt         *string `json:"deleted_at"`
