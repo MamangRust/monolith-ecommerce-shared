@@ -8,6 +8,10 @@ import (
 )
 
 var (
+	ErrApiInvalidId = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "error", "invalid merchant social ID", http.StatusBadRequest)
+	}
+
 	ErrApiFailedCreateMerchantSocialLink = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "Failed to create merchant social link", http.StatusInternalServerError)
 	}

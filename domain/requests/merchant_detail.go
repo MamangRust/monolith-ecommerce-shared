@@ -22,8 +22,8 @@ type UpdateMerchantDetailFormData struct {
 type CreateMerchantDetailRequest struct {
 	MerchantID       int    `json:"merchant_id" validate:"required"`
 	DisplayName      string `json:"display_name" validate:"required"`
-	CoverImageUrl    string `json:"cover_image_url" validate:"required,url"`
-	LogoUrl          string `json:"logo_url" validate:"required,url"`
+	CoverImageUrl    string `json:"cover_image_url"`
+	LogoUrl          string `json:"logo_url"`
 	ShortDescription string `json:"short_description" validate:"required"`
 	WebsiteUrl       string `json:"website_url" validate:"omitempty,url"`
 }
@@ -31,8 +31,8 @@ type CreateMerchantDetailRequest struct {
 type UpdateMerchantDetailRequest struct {
 	MerchantDetailID *int   `json:"merchant_detail_id" validate:"required"`
 	DisplayName      string `json:"display_name" validate:"required"`
-	CoverImageUrl    string `json:"cover_image_url" validate:"required,url"`
-	LogoUrl          string `json:"logo_url" validate:"required,url"`
+	CoverImageUrl    string `json:"cover_image_url" `
+	LogoUrl          string `json:"logo_url"`
 	ShortDescription string `json:"short_description" validate:"required"`
 	WebsiteUrl       string `json:"website_url" validate:"omitempty,url"`
 }

@@ -9,7 +9,7 @@ type CreateMerchantSocialRequest struct {
 }
 
 type UpdateMerchantSocialRequest struct {
-	ID               int    `json:"id" validate:"required"`
+	ID               int    `json:"id"`
 	MerchantDetailID *int   `json:"merchant_detail_id" validate:"required"`
 	Platform         string `json:"platform" validate:"required"`
 	Url              string `json:"url" validate:"required,url"`
