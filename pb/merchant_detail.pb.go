@@ -128,14 +128,13 @@ func (x *FindByIdMerchantDetailRequest) GetId() int32 {
 }
 
 type CreateMerchantDetailRequest struct {
-	state            protoimpl.MessageState         `protogen:"open.v1"`
-	MerchantId       int32                          `protobuf:"varint,1,opt,name=merchant_id,json=merchantId,proto3" json:"merchant_id,omitempty"`
-	DisplayName      string                         `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
-	CoverImageUrl    string                         `protobuf:"bytes,3,opt,name=cover_image_url,json=coverImageUrl,proto3" json:"cover_image_url,omitempty"`
-	LogoUrl          string                         `protobuf:"bytes,4,opt,name=logo_url,json=logoUrl,proto3" json:"logo_url,omitempty"`
-	ShortDescription string                         `protobuf:"bytes,5,opt,name=short_description,json=shortDescription,proto3" json:"short_description,omitempty"`
-	WebsiteUrl       string                         `protobuf:"bytes,6,opt,name=website_url,json=websiteUrl,proto3" json:"website_url,omitempty"`
-	SocialLinks      []*CreateMerchantSocialRequest `protobuf:"bytes,7,rep,name=social_links,json=socialLinks,proto3" json:"social_links,omitempty"`
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	MerchantId       int32                  `protobuf:"varint,1,opt,name=merchant_id,json=merchantId,proto3" json:"merchant_id,omitempty"`
+	DisplayName      string                 `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	CoverImageUrl    string                 `protobuf:"bytes,3,opt,name=cover_image_url,json=coverImageUrl,proto3" json:"cover_image_url,omitempty"`
+	LogoUrl          string                 `protobuf:"bytes,4,opt,name=logo_url,json=logoUrl,proto3" json:"logo_url,omitempty"`
+	ShortDescription string                 `protobuf:"bytes,5,opt,name=short_description,json=shortDescription,proto3" json:"short_description,omitempty"`
+	WebsiteUrl       string                 `protobuf:"bytes,6,opt,name=website_url,json=websiteUrl,proto3" json:"website_url,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -212,22 +211,14 @@ func (x *CreateMerchantDetailRequest) GetWebsiteUrl() string {
 	return ""
 }
 
-func (x *CreateMerchantDetailRequest) GetSocialLinks() []*CreateMerchantSocialRequest {
-	if x != nil {
-		return x.SocialLinks
-	}
-	return nil
-}
-
 type UpdateMerchantDetailRequest struct {
-	state            protoimpl.MessageState         `protogen:"open.v1"`
-	MerchantDetailId int32                          `protobuf:"varint,1,opt,name=merchant_detail_id,json=merchantDetailId,proto3" json:"merchant_detail_id,omitempty"`
-	DisplayName      string                         `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
-	CoverImageUrl    string                         `protobuf:"bytes,3,opt,name=cover_image_url,json=coverImageUrl,proto3" json:"cover_image_url,omitempty"`
-	LogoUrl          string                         `protobuf:"bytes,4,opt,name=logo_url,json=logoUrl,proto3" json:"logo_url,omitempty"`
-	ShortDescription string                         `protobuf:"bytes,5,opt,name=short_description,json=shortDescription,proto3" json:"short_description,omitempty"`
-	WebsiteUrl       string                         `protobuf:"bytes,6,opt,name=website_url,json=websiteUrl,proto3" json:"website_url,omitempty"`
-	SocialLinks      []*UpdateMerchantSocialRequest `protobuf:"bytes,7,rep,name=social_links,json=socialLinks,proto3" json:"social_links,omitempty"`
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	MerchantDetailId int32                  `protobuf:"varint,1,opt,name=merchant_detail_id,json=merchantDetailId,proto3" json:"merchant_detail_id,omitempty"`
+	DisplayName      string                 `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	CoverImageUrl    string                 `protobuf:"bytes,3,opt,name=cover_image_url,json=coverImageUrl,proto3" json:"cover_image_url,omitempty"`
+	LogoUrl          string                 `protobuf:"bytes,4,opt,name=logo_url,json=logoUrl,proto3" json:"logo_url,omitempty"`
+	ShortDescription string                 `protobuf:"bytes,5,opt,name=short_description,json=shortDescription,proto3" json:"short_description,omitempty"`
+	WebsiteUrl       string                 `protobuf:"bytes,6,opt,name=website_url,json=websiteUrl,proto3" json:"website_url,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -304,153 +295,21 @@ func (x *UpdateMerchantDetailRequest) GetWebsiteUrl() string {
 	return ""
 }
 
-func (x *UpdateMerchantDetailRequest) GetSocialLinks() []*UpdateMerchantSocialRequest {
-	if x != nil {
-		return x.SocialLinks
-	}
-	return nil
-}
-
-type CreateMerchantSocialRequest struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	MerchantDetailId int32                  `protobuf:"varint,1,opt,name=merchant_detail_id,json=merchantDetailId,proto3" json:"merchant_detail_id,omitempty"`
-	Platform         string                 `protobuf:"bytes,2,opt,name=platform,proto3" json:"platform,omitempty"`
-	Url              string                 `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *CreateMerchantSocialRequest) Reset() {
-	*x = CreateMerchantSocialRequest{}
-	mi := &file_merchant_detail_proto_msgTypes[4]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CreateMerchantSocialRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CreateMerchantSocialRequest) ProtoMessage() {}
-
-func (x *CreateMerchantSocialRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[4]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CreateMerchantSocialRequest.ProtoReflect.Descriptor instead.
-func (*CreateMerchantSocialRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *CreateMerchantSocialRequest) GetMerchantDetailId() int32 {
-	if x != nil {
-		return x.MerchantDetailId
-	}
-	return 0
-}
-
-func (x *CreateMerchantSocialRequest) GetPlatform() string {
-	if x != nil {
-		return x.Platform
-	}
-	return ""
-}
-
-func (x *CreateMerchantSocialRequest) GetUrl() string {
-	if x != nil {
-		return x.Url
-	}
-	return ""
-}
-
-type UpdateMerchantSocialRequest struct {
+type MerchantSocialMediaLinkResponse struct {
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	Id               int32                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	MerchantDetailId int32                  `protobuf:"varint,2,opt,name=merchant_detail_id,json=merchantDetailId,proto3" json:"merchant_detail_id,omitempty"`
 	Platform         string                 `protobuf:"bytes,3,opt,name=platform,proto3" json:"platform,omitempty"`
 	Url              string                 `protobuf:"bytes,4,opt,name=url,proto3" json:"url,omitempty"`
+	CreatedAt        string                 `protobuf:"bytes,5,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	UpdatedAt        string                 `protobuf:"bytes,6,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
 
-func (x *UpdateMerchantSocialRequest) Reset() {
-	*x = UpdateMerchantSocialRequest{}
-	mi := &file_merchant_detail_proto_msgTypes[5]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *UpdateMerchantSocialRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdateMerchantSocialRequest) ProtoMessage() {}
-
-func (x *UpdateMerchantSocialRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[5]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdateMerchantSocialRequest.ProtoReflect.Descriptor instead.
-func (*UpdateMerchantSocialRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *UpdateMerchantSocialRequest) GetId() int32 {
-	if x != nil {
-		return x.Id
-	}
-	return 0
-}
-
-func (x *UpdateMerchantSocialRequest) GetMerchantDetailId() int32 {
-	if x != nil {
-		return x.MerchantDetailId
-	}
-	return 0
-}
-
-func (x *UpdateMerchantSocialRequest) GetPlatform() string {
-	if x != nil {
-		return x.Platform
-	}
-	return ""
-}
-
-func (x *UpdateMerchantSocialRequest) GetUrl() string {
-	if x != nil {
-		return x.Url
-	}
-	return ""
-}
-
-type MerchantSocialMediaLinkResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            int32                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Platform      string                 `protobuf:"bytes,2,opt,name=platform,proto3" json:"platform,omitempty"`
-	Url           string                 `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
 func (x *MerchantSocialMediaLinkResponse) Reset() {
 	*x = MerchantSocialMediaLinkResponse{}
-	mi := &file_merchant_detail_proto_msgTypes[6]
+	mi := &file_merchant_detail_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -462,7 +321,7 @@ func (x *MerchantSocialMediaLinkResponse) String() string {
 func (*MerchantSocialMediaLinkResponse) ProtoMessage() {}
 
 func (x *MerchantSocialMediaLinkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[6]
+	mi := &file_merchant_detail_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -475,12 +334,19 @@ func (x *MerchantSocialMediaLinkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MerchantSocialMediaLinkResponse.ProtoReflect.Descriptor instead.
 func (*MerchantSocialMediaLinkResponse) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{6}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *MerchantSocialMediaLinkResponse) GetId() int32 {
 	if x != nil {
 		return x.Id
+	}
+	return 0
+}
+
+func (x *MerchantSocialMediaLinkResponse) GetMerchantDetailId() int32 {
+	if x != nil {
+		return x.MerchantDetailId
 	}
 	return 0
 }
@@ -495,6 +361,20 @@ func (x *MerchantSocialMediaLinkResponse) GetPlatform() string {
 func (x *MerchantSocialMediaLinkResponse) GetUrl() string {
 	if x != nil {
 		return x.Url
+	}
+	return ""
+}
+
+func (x *MerchantSocialMediaLinkResponse) GetCreatedAt() string {
+	if x != nil {
+		return x.CreatedAt
+	}
+	return ""
+}
+
+func (x *MerchantSocialMediaLinkResponse) GetUpdatedAt() string {
+	if x != nil {
+		return x.UpdatedAt
 	}
 	return ""
 }
@@ -517,7 +397,7 @@ type MerchantDetailResponse struct {
 
 func (x *MerchantDetailResponse) Reset() {
 	*x = MerchantDetailResponse{}
-	mi := &file_merchant_detail_proto_msgTypes[7]
+	mi := &file_merchant_detail_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -529,7 +409,7 @@ func (x *MerchantDetailResponse) String() string {
 func (*MerchantDetailResponse) ProtoMessage() {}
 
 func (x *MerchantDetailResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[7]
+	mi := &file_merchant_detail_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -542,7 +422,7 @@ func (x *MerchantDetailResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MerchantDetailResponse.ProtoReflect.Descriptor instead.
 func (*MerchantDetailResponse) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{7}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *MerchantDetailResponse) GetId() int32 {
@@ -634,7 +514,7 @@ type MerchantDetailResponseDeleteAt struct {
 
 func (x *MerchantDetailResponseDeleteAt) Reset() {
 	*x = MerchantDetailResponseDeleteAt{}
-	mi := &file_merchant_detail_proto_msgTypes[8]
+	mi := &file_merchant_detail_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -646,7 +526,7 @@ func (x *MerchantDetailResponseDeleteAt) String() string {
 func (*MerchantDetailResponseDeleteAt) ProtoMessage() {}
 
 func (x *MerchantDetailResponseDeleteAt) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[8]
+	mi := &file_merchant_detail_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -659,7 +539,7 @@ func (x *MerchantDetailResponseDeleteAt) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MerchantDetailResponseDeleteAt.ProtoReflect.Descriptor instead.
 func (*MerchantDetailResponseDeleteAt) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{8}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *MerchantDetailResponseDeleteAt) GetId() int32 {
@@ -750,7 +630,7 @@ type ApiResponseMerchantDetail struct {
 
 func (x *ApiResponseMerchantDetail) Reset() {
 	*x = ApiResponseMerchantDetail{}
-	mi := &file_merchant_detail_proto_msgTypes[9]
+	mi := &file_merchant_detail_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -762,7 +642,7 @@ func (x *ApiResponseMerchantDetail) String() string {
 func (*ApiResponseMerchantDetail) ProtoMessage() {}
 
 func (x *ApiResponseMerchantDetail) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[9]
+	mi := &file_merchant_detail_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -775,7 +655,7 @@ func (x *ApiResponseMerchantDetail) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponseMerchantDetail.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantDetail) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{9}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *ApiResponseMerchantDetail) GetStatus() string {
@@ -810,7 +690,7 @@ type ApiResponseMerchantDetailDeleteAt struct {
 
 func (x *ApiResponseMerchantDetailDeleteAt) Reset() {
 	*x = ApiResponseMerchantDetailDeleteAt{}
-	mi := &file_merchant_detail_proto_msgTypes[10]
+	mi := &file_merchant_detail_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -822,7 +702,7 @@ func (x *ApiResponseMerchantDetailDeleteAt) String() string {
 func (*ApiResponseMerchantDetailDeleteAt) ProtoMessage() {}
 
 func (x *ApiResponseMerchantDetailDeleteAt) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[10]
+	mi := &file_merchant_detail_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -835,7 +715,7 @@ func (x *ApiResponseMerchantDetailDeleteAt) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use ApiResponseMerchantDetailDeleteAt.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantDetailDeleteAt) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{10}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ApiResponseMerchantDetailDeleteAt) GetStatus() string {
@@ -870,7 +750,7 @@ type ApiResponsesMerchantDetail struct {
 
 func (x *ApiResponsesMerchantDetail) Reset() {
 	*x = ApiResponsesMerchantDetail{}
-	mi := &file_merchant_detail_proto_msgTypes[11]
+	mi := &file_merchant_detail_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -882,7 +762,7 @@ func (x *ApiResponsesMerchantDetail) String() string {
 func (*ApiResponsesMerchantDetail) ProtoMessage() {}
 
 func (x *ApiResponsesMerchantDetail) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[11]
+	mi := &file_merchant_detail_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -895,7 +775,7 @@ func (x *ApiResponsesMerchantDetail) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponsesMerchantDetail.ProtoReflect.Descriptor instead.
 func (*ApiResponsesMerchantDetail) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{11}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *ApiResponsesMerchantDetail) GetStatus() string {
@@ -931,7 +811,7 @@ type ApiResponsePaginationMerchantDetail struct {
 
 func (x *ApiResponsePaginationMerchantDetail) Reset() {
 	*x = ApiResponsePaginationMerchantDetail{}
-	mi := &file_merchant_detail_proto_msgTypes[12]
+	mi := &file_merchant_detail_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -943,7 +823,7 @@ func (x *ApiResponsePaginationMerchantDetail) String() string {
 func (*ApiResponsePaginationMerchantDetail) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantDetail) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[12]
+	mi := &file_merchant_detail_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -956,7 +836,7 @@ func (x *ApiResponsePaginationMerchantDetail) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use ApiResponsePaginationMerchantDetail.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantDetail) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{12}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *ApiResponsePaginationMerchantDetail) GetStatus() string {
@@ -999,7 +879,7 @@ type ApiResponsePaginationMerchantDetailDeleteAt struct {
 
 func (x *ApiResponsePaginationMerchantDetailDeleteAt) Reset() {
 	*x = ApiResponsePaginationMerchantDetailDeleteAt{}
-	mi := &file_merchant_detail_proto_msgTypes[13]
+	mi := &file_merchant_detail_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1011,7 +891,7 @@ func (x *ApiResponsePaginationMerchantDetailDeleteAt) String() string {
 func (*ApiResponsePaginationMerchantDetailDeleteAt) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantDetailDeleteAt) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_detail_proto_msgTypes[13]
+	mi := &file_merchant_detail_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1024,7 +904,7 @@ func (x *ApiResponsePaginationMerchantDetailDeleteAt) ProtoReflect() protoreflec
 
 // Deprecated: Use ApiResponsePaginationMerchantDetailDeleteAt.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantDetailDeleteAt) Descriptor() ([]byte, []int) {
-	return file_merchant_detail_proto_rawDescGZIP(), []int{13}
+	return file_merchant_detail_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *ApiResponsePaginationMerchantDetailDeleteAt) GetStatus() string {
@@ -1065,7 +945,7 @@ const file_merchant_detail_proto_rawDesc = "" +
 	"\tpage_size\x18\x02 \x01(\x05R\bpageSize\x12\x16\n" +
 	"\x06search\x18\x03 \x01(\tR\x06search\"/\n" +
 	"\x1dFindByIdMerchantDetailRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x05R\x02id\"\xb6\x02\n" +
+	"\x02id\x18\x01 \x01(\x05R\x02id\"\xf2\x01\n" +
 	"\x1bCreateMerchantDetailRequest\x12\x1f\n" +
 	"\vmerchant_id\x18\x01 \x01(\x05R\n" +
 	"merchantId\x12!\n" +
@@ -1074,8 +954,7 @@ const file_merchant_detail_proto_rawDesc = "" +
 	"\blogo_url\x18\x04 \x01(\tR\alogoUrl\x12+\n" +
 	"\x11short_description\x18\x05 \x01(\tR\x10shortDescription\x12\x1f\n" +
 	"\vwebsite_url\x18\x06 \x01(\tR\n" +
-	"websiteUrl\x12B\n" +
-	"\fsocial_links\x18\a \x03(\v2\x1f.pb.CreateMerchantSocialRequestR\vsocialLinks\"\xc3\x02\n" +
+	"websiteUrl\"\xff\x01\n" +
 	"\x1bUpdateMerchantDetailRequest\x12,\n" +
 	"\x12merchant_detail_id\x18\x01 \x01(\x05R\x10merchantDetailId\x12!\n" +
 	"\fdisplay_name\x18\x02 \x01(\tR\vdisplayName\x12&\n" +
@@ -1083,21 +962,16 @@ const file_merchant_detail_proto_rawDesc = "" +
 	"\blogo_url\x18\x04 \x01(\tR\alogoUrl\x12+\n" +
 	"\x11short_description\x18\x05 \x01(\tR\x10shortDescription\x12\x1f\n" +
 	"\vwebsite_url\x18\x06 \x01(\tR\n" +
-	"websiteUrl\x12B\n" +
-	"\fsocial_links\x18\a \x03(\v2\x1f.pb.UpdateMerchantSocialRequestR\vsocialLinks\"y\n" +
-	"\x1bCreateMerchantSocialRequest\x12,\n" +
-	"\x12merchant_detail_id\x18\x01 \x01(\x05R\x10merchantDetailId\x12\x1a\n" +
-	"\bplatform\x18\x02 \x01(\tR\bplatform\x12\x10\n" +
-	"\x03url\x18\x03 \x01(\tR\x03url\"\x89\x01\n" +
-	"\x1bUpdateMerchantSocialRequest\x12\x0e\n" +
+	"websiteUrl\"\xcb\x01\n" +
+	"\x1fMerchantSocialMediaLinkResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x05R\x02id\x12,\n" +
 	"\x12merchant_detail_id\x18\x02 \x01(\x05R\x10merchantDetailId\x12\x1a\n" +
 	"\bplatform\x18\x03 \x01(\tR\bplatform\x12\x10\n" +
-	"\x03url\x18\x04 \x01(\tR\x03url\"_\n" +
-	"\x1fMerchantSocialMediaLinkResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x05R\x02id\x12\x1a\n" +
-	"\bplatform\x18\x02 \x01(\tR\bplatform\x12\x10\n" +
-	"\x03url\x18\x03 \x01(\tR\x03url\"\x8e\x03\n" +
+	"\x03url\x18\x04 \x01(\tR\x03url\x12\x1d\n" +
+	"\n" +
+	"created_at\x18\x05 \x01(\tR\tcreatedAt\x12\x1d\n" +
+	"\n" +
+	"updated_at\x18\x06 \x01(\tR\tupdatedAt\"\x8e\x03\n" +
 	"\x16MerchantDetailResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x05R\x02id\x12\x1f\n" +
 	"\vmerchant_id\x18\x02 \x01(\x05R\n" +
@@ -1183,69 +1057,65 @@ func file_merchant_detail_proto_rawDescGZIP() []byte {
 	return file_merchant_detail_proto_rawDescData
 }
 
-var file_merchant_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
+var file_merchant_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_merchant_detail_proto_goTypes = []any{
 	(*FindAllMerchantDetailRequest)(nil),                // 0: pb.FindAllMerchantDetailRequest
 	(*FindByIdMerchantDetailRequest)(nil),               // 1: pb.FindByIdMerchantDetailRequest
 	(*CreateMerchantDetailRequest)(nil),                 // 2: pb.CreateMerchantDetailRequest
 	(*UpdateMerchantDetailRequest)(nil),                 // 3: pb.UpdateMerchantDetailRequest
-	(*CreateMerchantSocialRequest)(nil),                 // 4: pb.CreateMerchantSocialRequest
-	(*UpdateMerchantSocialRequest)(nil),                 // 5: pb.UpdateMerchantSocialRequest
-	(*MerchantSocialMediaLinkResponse)(nil),             // 6: pb.MerchantSocialMediaLinkResponse
-	(*MerchantDetailResponse)(nil),                      // 7: pb.MerchantDetailResponse
-	(*MerchantDetailResponseDeleteAt)(nil),              // 8: pb.MerchantDetailResponseDeleteAt
-	(*ApiResponseMerchantDetail)(nil),                   // 9: pb.ApiResponseMerchantDetail
-	(*ApiResponseMerchantDetailDeleteAt)(nil),           // 10: pb.ApiResponseMerchantDetailDeleteAt
-	(*ApiResponsesMerchantDetail)(nil),                  // 11: pb.ApiResponsesMerchantDetail
-	(*ApiResponsePaginationMerchantDetail)(nil),         // 12: pb.ApiResponsePaginationMerchantDetail
-	(*ApiResponsePaginationMerchantDetailDeleteAt)(nil), // 13: pb.ApiResponsePaginationMerchantDetailDeleteAt
-	(*wrapperspb.StringValue)(nil),                      // 14: google.protobuf.StringValue
-	(*PaginationMeta)(nil),                              // 15: pb.PaginationMeta
-	(*FindAllMerchantRequest)(nil),                      // 16: pb.FindAllMerchantRequest
-	(*emptypb.Empty)(nil),                               // 17: google.protobuf.Empty
-	(*ApiResponseMerchantDelete)(nil),                   // 18: pb.ApiResponseMerchantDelete
-	(*ApiResponseMerchantAll)(nil),                      // 19: pb.ApiResponseMerchantAll
+	(*MerchantSocialMediaLinkResponse)(nil),             // 4: pb.MerchantSocialMediaLinkResponse
+	(*MerchantDetailResponse)(nil),                      // 5: pb.MerchantDetailResponse
+	(*MerchantDetailResponseDeleteAt)(nil),              // 6: pb.MerchantDetailResponseDeleteAt
+	(*ApiResponseMerchantDetail)(nil),                   // 7: pb.ApiResponseMerchantDetail
+	(*ApiResponseMerchantDetailDeleteAt)(nil),           // 8: pb.ApiResponseMerchantDetailDeleteAt
+	(*ApiResponsesMerchantDetail)(nil),                  // 9: pb.ApiResponsesMerchantDetail
+	(*ApiResponsePaginationMerchantDetail)(nil),         // 10: pb.ApiResponsePaginationMerchantDetail
+	(*ApiResponsePaginationMerchantDetailDeleteAt)(nil), // 11: pb.ApiResponsePaginationMerchantDetailDeleteAt
+	(*wrapperspb.StringValue)(nil),                      // 12: google.protobuf.StringValue
+	(*PaginationMeta)(nil),                              // 13: pb.PaginationMeta
+	(*FindAllMerchantRequest)(nil),                      // 14: pb.FindAllMerchantRequest
+	(*emptypb.Empty)(nil),                               // 15: google.protobuf.Empty
+	(*ApiResponseMerchantDelete)(nil),                   // 16: pb.ApiResponseMerchantDelete
+	(*ApiResponseMerchantAll)(nil),                      // 17: pb.ApiResponseMerchantAll
 }
 var file_merchant_detail_proto_depIdxs = []int32{
-	4,  // 0: pb.CreateMerchantDetailRequest.social_links:type_name -> pb.CreateMerchantSocialRequest
-	5,  // 1: pb.UpdateMerchantDetailRequest.social_links:type_name -> pb.UpdateMerchantSocialRequest
-	6,  // 2: pb.MerchantDetailResponse.social_media_links:type_name -> pb.MerchantSocialMediaLinkResponse
-	6,  // 3: pb.MerchantDetailResponseDeleteAt.social_media_links:type_name -> pb.MerchantSocialMediaLinkResponse
-	14, // 4: pb.MerchantDetailResponseDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
-	7,  // 5: pb.ApiResponseMerchantDetail.data:type_name -> pb.MerchantDetailResponse
-	8,  // 6: pb.ApiResponseMerchantDetailDeleteAt.data:type_name -> pb.MerchantDetailResponseDeleteAt
-	7,  // 7: pb.ApiResponsesMerchantDetail.data:type_name -> pb.MerchantDetailResponse
-	7,  // 8: pb.ApiResponsePaginationMerchantDetail.data:type_name -> pb.MerchantDetailResponse
-	15, // 9: pb.ApiResponsePaginationMerchantDetail.pagination:type_name -> pb.PaginationMeta
-	8,  // 10: pb.ApiResponsePaginationMerchantDetailDeleteAt.data:type_name -> pb.MerchantDetailResponseDeleteAt
-	15, // 11: pb.ApiResponsePaginationMerchantDetailDeleteAt.pagination:type_name -> pb.PaginationMeta
-	16, // 12: pb.MerchantDetailService.FindAll:input_type -> pb.FindAllMerchantRequest
-	1,  // 13: pb.MerchantDetailService.FindById:input_type -> pb.FindByIdMerchantDetailRequest
-	16, // 14: pb.MerchantDetailService.FindByActive:input_type -> pb.FindAllMerchantRequest
-	16, // 15: pb.MerchantDetailService.FindByTrashed:input_type -> pb.FindAllMerchantRequest
-	2,  // 16: pb.MerchantDetailService.Create:input_type -> pb.CreateMerchantDetailRequest
-	3,  // 17: pb.MerchantDetailService.Update:input_type -> pb.UpdateMerchantDetailRequest
-	1,  // 18: pb.MerchantDetailService.TrashedMerchantDetail:input_type -> pb.FindByIdMerchantDetailRequest
-	1,  // 19: pb.MerchantDetailService.RestoreMerchantDetail:input_type -> pb.FindByIdMerchantDetailRequest
-	1,  // 20: pb.MerchantDetailService.DeleteMerchantDetailPermanent:input_type -> pb.FindByIdMerchantDetailRequest
-	17, // 21: pb.MerchantDetailService.RestoreAllMerchantDetail:input_type -> google.protobuf.Empty
-	17, // 22: pb.MerchantDetailService.DeleteAllMerchantDetailPermanent:input_type -> google.protobuf.Empty
-	12, // 23: pb.MerchantDetailService.FindAll:output_type -> pb.ApiResponsePaginationMerchantDetail
-	9,  // 24: pb.MerchantDetailService.FindById:output_type -> pb.ApiResponseMerchantDetail
-	13, // 25: pb.MerchantDetailService.FindByActive:output_type -> pb.ApiResponsePaginationMerchantDetailDeleteAt
-	13, // 26: pb.MerchantDetailService.FindByTrashed:output_type -> pb.ApiResponsePaginationMerchantDetailDeleteAt
-	9,  // 27: pb.MerchantDetailService.Create:output_type -> pb.ApiResponseMerchantDetail
-	9,  // 28: pb.MerchantDetailService.Update:output_type -> pb.ApiResponseMerchantDetail
-	10, // 29: pb.MerchantDetailService.TrashedMerchantDetail:output_type -> pb.ApiResponseMerchantDetailDeleteAt
-	10, // 30: pb.MerchantDetailService.RestoreMerchantDetail:output_type -> pb.ApiResponseMerchantDetailDeleteAt
-	18, // 31: pb.MerchantDetailService.DeleteMerchantDetailPermanent:output_type -> pb.ApiResponseMerchantDelete
-	19, // 32: pb.MerchantDetailService.RestoreAllMerchantDetail:output_type -> pb.ApiResponseMerchantAll
-	19, // 33: pb.MerchantDetailService.DeleteAllMerchantDetailPermanent:output_type -> pb.ApiResponseMerchantAll
-	23, // [23:34] is the sub-list for method output_type
-	12, // [12:23] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	4,  // 0: pb.MerchantDetailResponse.social_media_links:type_name -> pb.MerchantSocialMediaLinkResponse
+	4,  // 1: pb.MerchantDetailResponseDeleteAt.social_media_links:type_name -> pb.MerchantSocialMediaLinkResponse
+	12, // 2: pb.MerchantDetailResponseDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
+	5,  // 3: pb.ApiResponseMerchantDetail.data:type_name -> pb.MerchantDetailResponse
+	6,  // 4: pb.ApiResponseMerchantDetailDeleteAt.data:type_name -> pb.MerchantDetailResponseDeleteAt
+	5,  // 5: pb.ApiResponsesMerchantDetail.data:type_name -> pb.MerchantDetailResponse
+	5,  // 6: pb.ApiResponsePaginationMerchantDetail.data:type_name -> pb.MerchantDetailResponse
+	13, // 7: pb.ApiResponsePaginationMerchantDetail.pagination:type_name -> pb.PaginationMeta
+	6,  // 8: pb.ApiResponsePaginationMerchantDetailDeleteAt.data:type_name -> pb.MerchantDetailResponseDeleteAt
+	13, // 9: pb.ApiResponsePaginationMerchantDetailDeleteAt.pagination:type_name -> pb.PaginationMeta
+	14, // 10: pb.MerchantDetailService.FindAll:input_type -> pb.FindAllMerchantRequest
+	1,  // 11: pb.MerchantDetailService.FindById:input_type -> pb.FindByIdMerchantDetailRequest
+	14, // 12: pb.MerchantDetailService.FindByActive:input_type -> pb.FindAllMerchantRequest
+	14, // 13: pb.MerchantDetailService.FindByTrashed:input_type -> pb.FindAllMerchantRequest
+	2,  // 14: pb.MerchantDetailService.Create:input_type -> pb.CreateMerchantDetailRequest
+	3,  // 15: pb.MerchantDetailService.Update:input_type -> pb.UpdateMerchantDetailRequest
+	1,  // 16: pb.MerchantDetailService.TrashedMerchantDetail:input_type -> pb.FindByIdMerchantDetailRequest
+	1,  // 17: pb.MerchantDetailService.RestoreMerchantDetail:input_type -> pb.FindByIdMerchantDetailRequest
+	1,  // 18: pb.MerchantDetailService.DeleteMerchantDetailPermanent:input_type -> pb.FindByIdMerchantDetailRequest
+	15, // 19: pb.MerchantDetailService.RestoreAllMerchantDetail:input_type -> google.protobuf.Empty
+	15, // 20: pb.MerchantDetailService.DeleteAllMerchantDetailPermanent:input_type -> google.protobuf.Empty
+	10, // 21: pb.MerchantDetailService.FindAll:output_type -> pb.ApiResponsePaginationMerchantDetail
+	7,  // 22: pb.MerchantDetailService.FindById:output_type -> pb.ApiResponseMerchantDetail
+	11, // 23: pb.MerchantDetailService.FindByActive:output_type -> pb.ApiResponsePaginationMerchantDetailDeleteAt
+	11, // 24: pb.MerchantDetailService.FindByTrashed:output_type -> pb.ApiResponsePaginationMerchantDetailDeleteAt
+	7,  // 25: pb.MerchantDetailService.Create:output_type -> pb.ApiResponseMerchantDetail
+	7,  // 26: pb.MerchantDetailService.Update:output_type -> pb.ApiResponseMerchantDetail
+	8,  // 27: pb.MerchantDetailService.TrashedMerchantDetail:output_type -> pb.ApiResponseMerchantDetailDeleteAt
+	8,  // 28: pb.MerchantDetailService.RestoreMerchantDetail:output_type -> pb.ApiResponseMerchantDetailDeleteAt
+	16, // 29: pb.MerchantDetailService.DeleteMerchantDetailPermanent:output_type -> pb.ApiResponseMerchantDelete
+	17, // 30: pb.MerchantDetailService.RestoreAllMerchantDetail:output_type -> pb.ApiResponseMerchantAll
+	17, // 31: pb.MerchantDetailService.DeleteAllMerchantDetailPermanent:output_type -> pb.ApiResponseMerchantAll
+	21, // [21:32] is the sub-list for method output_type
+	10, // [10:21] is the sub-list for method input_type
+	10, // [10:10] is the sub-list for extension type_name
+	10, // [10:10] is the sub-list for extension extendee
+	0,  // [0:10] is the sub-list for field type_name
 }
 
 func init() { file_merchant_detail_proto_init() }
@@ -1261,7 +1131,7 @@ func file_merchant_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_merchant_detail_proto_rawDesc), len(file_merchant_detail_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   14,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

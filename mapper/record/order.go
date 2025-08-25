@@ -24,6 +24,7 @@ func (s *orderRecordMapper) ToOrderRecord(order *db.Order) *record.OrderRecord {
 		ID:         int(order.OrderID),
 		MerchantID: int(order.MerchantID),
 		TotalPrice: int(order.TotalPrice),
+		UserID:     int(order.UserID),
 		CreatedAt:  order.CreatedAt.Time.Format("2006-01-02 15:04:05.000"),
 		UpdatedAt:  order.UpdatedAt.Time.Format("2006-01-02 15:04:05.000"),
 		DeletedAt:  deletedAt,

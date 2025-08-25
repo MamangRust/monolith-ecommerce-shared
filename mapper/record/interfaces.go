@@ -115,6 +115,11 @@ type MerchantDocumentMapping interface {
 	ToMerchantDocumentsTrashedRecord(docs []*db.GetTrashedMerchantDocumentsRow) []*record.MerchantDocumentRecord
 }
 
+type MerchantSociaLinkMapping interface {
+	ToMerchantSocialLinkRecord(link *db.MerchantSocialMediaLink) *record.MerchantSocialLinkRecord
+	ToMerchantSocialLinksRecord(links []*db.MerchantSocialMediaLink) []*record.MerchantSocialLinkRecord
+}
+
 type MerchantPolicyMapping interface {
 	ToMerchantPolicyRecord(m *db.MerchantPolicy) *record.MerchantPoliciesRecord
 	ToMerchantPolicyRecordPagination(m *db.GetMerchantPoliciesRow) *record.MerchantPoliciesRecord

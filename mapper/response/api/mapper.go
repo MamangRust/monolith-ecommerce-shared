@@ -21,6 +21,7 @@ type ResponseApiMapper struct {
 	MerchantPolicyResponseMapper  MerchantPolicyResponseMapper
 	ReviewDetailResponseMapper    ReviewDetailResponseMapper
 	MerchantDocumentProMapper     MerchantDocumentResponseMapper
+	MerchantSocialLinkProtoMapper MerchantSocialLinkMapper
 }
 
 func NewResponseApiMapper() *ResponseApiMapper {
@@ -45,5 +46,6 @@ func NewResponseApiMapper() *ResponseApiMapper {
 		MerchantPolicyResponseMapper:  NewMerchantPolicyResponseMapper(),
 		ReviewDetailResponseMapper:    NewReviewDetailResponseMapper(),
 		MerchantDocumentProMapper:     NewMerchantDocumentResponseMapper(),
+		MerchantSocialLinkProtoMapper: NewMerchantSocialLinkResponseMapper(),
 	}
 }

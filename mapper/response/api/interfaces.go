@@ -108,6 +108,10 @@ type MerchantDetailResponseMapper interface {
 	ToApiResponsePaginationMerchantDetail(pbResponse *pb.ApiResponsePaginationMerchantDetail) *response.ApiResponsePaginationMerchantDetail
 }
 
+type MerchantSocialLinkMapper interface {
+	ToApiResponseMerchantSocialLink(pbResponse *pb.ApiResponseMerchantSocial) *response.ApiResponseMerchantSocialLink
+}
+
 type MerchantPolicyResponseMapper interface {
 	ToApiResponseMerchantPolicies(pbResponse *pb.ApiResponseMerchantPolicies) *response.ApiResponseMerchantPolicies
 	ToApiResponseMerchantPoliciesDeleteAt(pbResponse *pb.ApiResponseMerchantPoliciesDeleteAt) *response.ApiResponseMerchantPoliciesDeleteAt

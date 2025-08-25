@@ -8,6 +8,26 @@ import (
 )
 
 var (
+	ErrApiInvalidMerchantId = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "validation_error", "Invalid merchant ID", http.StatusBadRequest)
+	}
+
+	ErrApiDocumentTypeRequired = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "validation_error", "Document type is required", http.StatusBadRequest)
+	}
+
+	ErrApiDocumentFileRequired = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "validation_error", "Document file is required", http.StatusBadRequest)
+	}
+
+	ErrApiStatusRequired = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "validation_error", "Status is required", http.StatusBadRequest)
+	}
+
+	ErrApiNoteRequired = func(c echo.Context) error {
+		return response.NewApiErrorResponse(c, "validation_error", "Note is required", http.StatusBadRequest)
+	}
+
 	ErrApiInvalidMerchantDocumentID = func(c echo.Context) error {
 		return response.NewApiErrorResponse(c, "error", "Invalid merchant document ID", http.StatusBadRequest)
 	}

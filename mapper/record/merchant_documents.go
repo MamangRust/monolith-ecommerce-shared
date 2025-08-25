@@ -8,7 +8,7 @@ import (
 type merchantDocumentRecordMapper struct {
 }
 
-func NewMerchantDocumentRecordMapper() *merchantDocumentRecordMapper {
+func NewMerchantDocumentRecordMapper() MerchantDocumentMapping {
 	return &merchantDocumentRecordMapper{}
 }
 

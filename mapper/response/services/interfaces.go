@@ -65,6 +65,10 @@ type MerchantDocumentResponseMapper interface {
 	ToMerchantDocumentsResponseDeleteAt(docs []*record.MerchantDocumentRecord) []*response.MerchantDocumentResponseDeleteAt
 }
 
+type MerchantSocialLinkResponseMapper interface {
+	ToMerchantSocialLinkResponse(merchant *record.MerchantSocialLinkRecord) *response.MerchantSocialLinkResponse
+}
+
 type MerchantAwardResponseMapper interface {
 	ToMerchantAwardResponse(merchant *record.MerchantAwardRecord) *response.MerchantAwardResponse
 	ToMerchantsAwardResponse(merchants []*record.MerchantAwardRecord) []*response.MerchantAwardResponse

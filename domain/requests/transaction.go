@@ -48,7 +48,7 @@ type FindAllTransactionByMerchant struct {
 }
 
 type CreateTransactionRequest struct {
-	UserID        int     `json:"user_id" validate:"required"`
+	UserID        int     `json:"user_id"`
 	OrderID       int     `json:"order_id" validate:"required"`
 	MerchantID    int     `json:"merchant_id" validate:"required"`
 	PaymentMethod string  `json:"payment_method" validate:"required"`

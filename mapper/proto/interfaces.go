@@ -84,6 +84,10 @@ type MerchantDocumentProtoMapper interface {
 	ToProtoResponseMerchantDocumentAll(status string, message string) *pb.ApiResponseMerchantDocumentAll
 }
 
+type MerchantSocialLinkProtoMapper interface {
+	ToProtoResponseMerchantSocialLink(status string, message string, pbResponse *response.MerchantSocialLinkResponse) *pb.ApiResponseMerchantSocial
+}
+
 type MerchantAwardProtoMapper interface {
 	ToProtoResponseMerchantAward(status string, message string, pbResponse *response.MerchantAwardResponse) *pb.ApiResponseMerchantAward
 	ToProtoResponseMerchantAwardDeleteAt(status string, message string, pbResponse *response.MerchantAwardResponseDeleteAt) *pb.ApiResponseMerchantAwardDeleteAt
